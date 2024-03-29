@@ -28,6 +28,8 @@ public enum TagName: String {
     case publishedAt = "published_at"
     
     case identifier = "d"
+
+    case identity = "i"
     
     case image
     
@@ -66,14 +68,14 @@ public class Tag: Codable, Equatable {
     }
     
     /// The name of the tag.
-    let name: String
+    public let name: String
 
     /// The main value associated with the tag. For example, for the
     /// pubkey name, the `value` is the 32-byte, hex-encoded pubkey.
-    let value: String
+    public let value: String
     
     /// The remaining parameters in the array of strings the tag consists of.
-    let otherParameters: [String]
+    public let otherParameters: [String]
     
     /// Creates and returns a ``Tag`` object that references some piece of content.
     /// - Parameters:
