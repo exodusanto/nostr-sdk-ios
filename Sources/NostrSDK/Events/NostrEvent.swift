@@ -10,7 +10,7 @@ import Foundation
 /// A structure that describes a Nostr event.
 ///
 /// > Note: [NIP-01 Specification](https://github.com/nostr-protocol/nips/blob/master/01.md#events-and-signatures)
-public class NostrEvent: Codable, Equatable {
+open class NostrEvent: Codable, Equatable {
     public static func == (lhs: NostrEvent, rhs: NostrEvent) -> Bool {
         lhs.id == rhs.id
     }
